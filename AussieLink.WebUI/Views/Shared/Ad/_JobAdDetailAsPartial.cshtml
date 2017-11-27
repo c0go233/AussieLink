@@ -1,0 +1,25 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.JobAdDetailVM
+
+
+<div class="c-mc__cntr fx fx-algn-start">
+    <div class="c-mc__left"></div>
+
+    <div class="c-mc__center fx-1">
+        <div class="c-detail-page">
+            @Html.Partial("~/Views/Shared/Ad/_AdDetailHeader.cshtml", Model.JobAdPostVM)
+            @Html.Partial("~/Views/Shared/Ad/_JobAdDetailFeatures.cshtml", Model.JobAdPostVM)
+
+            <div class="c-detail-page__desc-wraper">
+                <p class="c-detail-page__features-header"><span>Description</span></p>
+                <div class="c-detail-page__desc">@Model.JobAdPostVM.Description</div>
+            </div>
+
+            @Html.Partial("~/Views/Shared/Ad/_AdDetailBottom.cshtml", Model)
+        </div>
+
+        @Html.Partial("~/Views/Shared/Ad/_AdDetailComment.cshtml")
+    </div>
+
+    <div class="c-mc__right"></div>
+</div>
+

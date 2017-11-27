@@ -1,0 +1,10 @@
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.Contracts\bin\Debug\AussieLink.Contracts.dll
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.Contracts\bin\Debug\AussieLink.Contracts.pdb
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.Contracts\obj\Debug\AussieLink.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.Contracts\obj\Debug\AussieLink.Contracts.dll
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.Contracts\obj\Debug\AussieLink.Contracts.pdb
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.Contracts\bin\Debug\AussieLink.Contracts.dll
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.Contracts\bin\Debug\AussieLink.Contracts.pdb
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.Contracts\obj\Debug\AussieLink.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.Contracts\obj\Debug\AussieLink.Contracts.dll
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.Contracts\obj\Debug\AussieLink.Contracts.pdb

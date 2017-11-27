@@ -1,0 +1,16 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.JobAdDetailVM
+
+@{
+    ViewBag.Title = "JobAdDetail";
+}
+
+<div class="c-mc">
+    @Html.Partial("~/Views/Shared/Ad/_JobAdDetailAsPartial.cshtml")
+    @Html.HiddenFor(m => m.CurrentPostId)
+</div>
+
+
+@section scripts
+{
+    @Scripts.Render("~/Content/Resources/JavaScript/commentScript.js")
+}

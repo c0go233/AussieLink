@@ -1,0 +1,44 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.JobAdPostVM
+
+@{ 
+    var jobDay = Model.JobDay == null ? "N/A" : Model.JobDay;
+    var salary = Model.Salary == null ? "N/A" : Model.Salary;
+}
+
+<div class="c-detail-page__features">
+    <p class="c-detail-page__features-header"><span>Features</span></p>
+    <div class="c-detail-page__features-body fx-spc-btw">
+        <div class="c-detail-page__feature-wraper fx-1">
+            <div class="c-detail-page__feature fx-spc-btw">
+                <span><i class="ion-ios-location c-mg-r-5"></i>Location</span>
+                <span class="color-main-blue">@Model.Place</span>
+            </div>
+
+
+            <div class="c-detail-page__feature fx-spc-btw">
+                <span><i class="ion-ios-calendar c-mg-r-5"></i>Day</span>
+                <span class="color-main-blue">@jobDay</span>
+            </div>
+
+
+            <div class="c-detail-page__feature fx-spc-btw">
+                <span class="c-min-width-110"><i class="ion-social-usd c-mg-r-5"></i>Salary</span>
+                <span class="color-main-blue c-txt-align-r">@salary</span>
+            </div>
+        </div>
+
+        <div class="c-detail-page__feature-wraper fx-1">
+            <div class="c-detail-page__feature fx-spc-btw">
+                <span><i class="ion-ios-clock c-mg-r-5"></i>Contract Type</span>
+                <span class="color-main-blue">@Model.ContractType</span>
+            </div>
+
+
+            <div class="c-detail-page__feature fx-spc-btw">
+                <span class="c-min-width-110"><i class="ion-briefcase c-mg-r-5"></i>Job Type</span>
+                <span class="color-main-blue c-txt-align-r">@Model.JobType</span>
+            </div>
+        </div>
+
+    </div>
+</div>

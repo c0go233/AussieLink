@@ -1,0 +1,15 @@
+﻿@{
+    var selectedMenu = Model.CurrentMyAccountMenu;
+    var profileSelected = selectedMenu == "Profile" ? "true" : "false";
+    var manageAdSelected = selectedMenu == "ManageAds" ? "true" : "false";
+    var messageSelected = selectedMenu == "Message" ? "true" : "false";
+}
+
+
+<div class="mp-top">
+    <ul class="mp-top__nav-list fx">
+        <li><a href="@Url.Action("MyProfile", "Manage")" class="mp-top__nav-link" name="Profile" aria-selected=@(profileSelected)>My Profile</a></li>
+        <li><a href="@Url.Action("MyAds", "Manage")" class="mp-top__nav-link" aria-selected=@(manageAdSelected)>Manage Ads</a></li>
+        <li><a href="#" class="mp-top__nav-link" aria-selected=@messageSelected>Message</a></li>
+    </ul>
+</div>

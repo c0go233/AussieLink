@@ -1,0 +1,30 @@
+﻿<ul class="mast-header__nav-list">
+    <li class="mast-header__nav-item"><a href="@Url.Action("About", "Home")" class="mast-header__nav-link"><i class="ion-information-circled mast-header__nav-icon"></i>About Us</a></li>
+
+    @if (Request.IsAuthenticated)
+    {
+        <li class="mast-header__nav-item c-dropdown">
+            <span class="mast-header__myAccount c-dropdown__toggle">
+                <i class="ion-android-person mast-header__nav-icon"></i>My Account
+            </span>
+
+            <div class="c-dropdown__menu mast-header__dropdown-menu">
+                <ul>
+                    <li class="mast-header__myact-menu-header">My Account</li>
+                    <li><a href="#" class="mast-header__myact-menu-link"><i class="ion-chatbubbles"></i>Message</a></li>
+                    <li><a href="@Url.Action("MyAds", "Manage")" class="mast-header__myact-menu-link"><i class="ion-compose"></i>Manage Ads</a></li>
+                    <li><a href="@Url.Action("MyProfile", "Manage")" class="mast-header__myact-menu-link"><i class="ion-android-person"></i>My profile</a></li>
+                    <li><a href=@Url.Action("SignOut", "Account") class="mast-header__myact-menu-link"><i class="ion-log-out"></i>Logout</a></li>
+                </ul>
+            </div>
+        </li>
+    }
+    else
+    {
+        <li class="mast-header__nav-item"><a href="@Url.Action("SignIn", "Account")" class="mast-header__nav-link"><i class="ion-log-out mast-header__nav-icon"></i>Sign In</a></li>
+        <li class="mast-header__nav-item"><a href="@Url.Action("SignUp", "Account")" class="mast-header__nav-link"><i class="ion-edit mast-header__nav-icon"></i>Sign Up</a></li>
+    }
+
+    <li class="mast-header__nav-item"><a href="@Url.Action("Post", "Post")" class="mast-header__nav-post-btn">Post Ad</a></li>
+</ul>
+

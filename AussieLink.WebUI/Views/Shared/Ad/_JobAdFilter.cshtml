@@ -1,0 +1,78 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.JobAdFilterVM
+
+
+<div class="filter">
+    <p class="filter__header">Location</p>
+    <div class="filter__body">
+        <ul>
+            <li class="p-relative">
+                @Html.RadioButton("Place", "", true, new { id = "all-places", @class = "c-checkbox filter__checkbox" })
+                @Html.Label("all-places", "All Places", new { @class = "c-checkbox-label filter__checkbox-label" })
+            </li>
+            @foreach (var place in Model.JobAdCategories.Places)
+            {
+                <li class="p-relative">
+                    @Html.RadioButtonFor(m => m.Place, place.Name, new { id = place.Name, @class = "c-checkbox filter__checkbox" })
+                    @Html.Label(place.Name, new { @class = "c-checkbox-label filter__checkbox-label" })
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<div class="filter">
+    <p class="filter__header">Contract Type</p>
+    <div class="filter__body">
+        <ul>
+            <li class="p-relative">
+                @Html.RadioButton("ContractType", "", true, new { id = "all-types", @class = "c-checkbox filter__checkbox" })
+                @Html.Label("all-types", "All Types", new { @class = "c-checkbox-label filter__checkbox-label" })
+            </li>
+            @foreach (var contractType in Model.JobAdCategories.ContractTypes)
+            {
+                <li class="p-relative">
+                    @Html.RadioButtonFor(m => m.ContractType, contractType.Name, new { id = contractType.Name, @class = "c-checkbox filter__checkbox" })
+                    @Html.Label(contractType.Name, new { @class = "c-checkbox-label filter__checkbox-label" })
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+
+<div class="filter">
+    <div class="filter-header-ext-mg fx-spc-btw filter__salaryType-header">
+        <span>Salary</span>
+        <div class="c-two-radio-wraper">
+            @foreach (var salaryType in Model.JobAdCategories.SalaryTypes)
+            {
+                if (salaryType.SalaryTypeId == 1)
+                {
+                    @Html.RadioButtonFor(m => m.SalaryType, salaryType.Name, new { id = salaryType.Name.Replace(" ", "_"), @class = "c-two-radio-btn", @checked = "checked" })
+                }
+                else
+                {
+                    @Html.RadioButtonFor(m => m.SalaryType, salaryType.Name, new { id = salaryType.Name.Replace(" ", "_"), @class = "c-two-radio-btn"})
+                }
+                @Html.Label(salaryType.Name, new { @class = "c-two-radio-label filter__salaryType-radio-label" })
+            }
+        </div>
+    </div>
+    <div class="filter__body filter__salary-select-box-wraper">
+        @Html.DropDownListFor(m => m.Salary, new SelectList(Model.JobAdCategories.HourlySalaryCategories, "Amount", "Name"), "Minimum Salary", new { @class = "select-box hourly-salary-select-box", id = "A_Hour" })
+        @Html.DropDownListFor(m => m.Salary, new SelectList(Model.JobAdCategories.WeeklySalaryCategories, "Amount", "Name"), "Minimum Salary", new { @class = "select-box weekly-salary-select-box", id = "A_Week" })
+    </div>
+</div>
+
+<div class="filter">
+    <p class="filter-header-ext-mg">Day</p>
+    <div class="filter__body">
+        @Html.DropDownListFor(m => m.Day, new SelectList(Model.JobAdCategories.DayCategories, "Amount", "Name"), "Minimum Day", new { @class = "select-box" })
+    </div>
+</div>
+
+<div class="filter">
+    <p class="filter-header-ext-mg">Job Type</p>
+    <div class="filter__body">
+        @Html.DropDownListFor(m => m.JobType, new SelectList(Model.JobAdCategories.JobTypes, "Name", "Name"), "Job Type", new { @class = "select-box" })
+    </div>
+</div>

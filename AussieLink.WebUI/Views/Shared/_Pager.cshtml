@@ -1,0 +1,37 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.Pager
+
+<div class="c-pager">
+    <ul class="c-pager__list fx">
+        @if(Model.CurrentPage == 1)
+        {
+            <li class="c-pager__direct-link-item"><span class="c-pager__link-box c-pager__direct-link-inactive"><i class="ion-chevron-left c-mg-r-5"></i>First</span></li>
+        }
+        else
+        {
+            <li class="c-pager__direct-link-item"><a href="@(Model.PageUrl)1" class="c-pager__link-box c-pager__direct-link"><i class="ion-chevron-left c-mg-r-5"></i>First</a></li>
+        }
+
+        @for (int page = Model.StartPage; page <= Model.EndPage; page++)
+        {
+            if (page == Model.CurrentPage)
+            {
+                <li><span class="c-pager__link-box c-pager__number-link-seleted">@page</span></li>
+            }
+            else
+            {
+                <li><a href="@(Model.PageUrl)@page" class="c-pager__link-box c-pager__number-link">@page</a></li>
+            }
+        }
+
+        @if (Model.CurrentPage == Model.TotalPages)
+        {
+            <li class="c-pager__direct-link-item"><span class="c-pager__link-box c-pager__direct-link-inactive">Last<i class="ion-chevron-right c-mg-l-5"></i></span></li>
+        }
+        else
+        {
+            <li class="c-pager__direct-link-item"><a href="@(Model.PageUrl)@(Model.TotalPages)" class="c-pager__link-box c-pager__direct-link">Last<i class="ion-chevron-right c-mg-l-5"></i></a></li>
+        }
+    </ul>
+</div>
+
+

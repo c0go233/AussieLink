@@ -1,0 +1,17 @@
+﻿<header class="mast-header">
+    <div class="mast-header__cntr fx-spc-btw">
+        <div class="mast-header__logo-cntr">
+            <a href="@Url.Action("Index", "Home")" class="fx mast-header__logo-link">
+                <img class="mast-header__logo-img" src="~/Content/Resources/Image/logo-blue.png" alt="aussie link logo" />
+                <span class="mast-header__logo-letter">AUSSIE<span class="color-main-blue">LINK</span></span>
+            </a>
+        </div>
+
+        <nav class="mast-header__nav">
+            <button class="mast-header__mb-nav-btn ion-navicon-round mobile-nav-btn"></button>
+            @Html.Partial("_LoginPartial")
+        </nav>
+    </div>
+</header>
+
+

@@ -1,0 +1,48 @@
+﻿@model AussieLink.Contracts.ViewModels.UserSignupVM
+
+<div class="signup__cntr">
+    @Html.Partial("/Views/Shared/SignForm/_SignFormTop.cshtml")
+    @Html.ValidationSummary(true)
+    <div class="signup__body fx">
+        <div class="signup__form-cntr fx-1">
+            @using (Html.BeginForm("SignUp", "Account"))
+            {
+                <div class="signup__input-cntr">
+                    @Html.EditorFor(m => m.Email, new { htmlAttributes = new { placeholder = "Email", @class = "form-input signup__input" } })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+
+                <div class="signup__input-cntr">
+                    @Html.EditorFor(m => m.Name, new { htmlAttributes = new { placeholder = "Name", @class = "form-input signup__input" } })
+                    @Html.ValidationMessageFor(m => m.Name)
+                </div>
+
+                <div class="signup__input-cntr">
+                    @Html.EditorFor(m => m.Password, new { htmlAttributes = new { placeholder = "Password", @class = "form-input signup__input" } })
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+
+                <div class="signup__input-cntr">
+                    @Html.EditorFor(m => m.ConfirmPassword, new { htmlAttributes = new { placeholder = "Confirm Password", @class = "form-input signup__input" } })
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                </div>
+
+                <button type="submit" class="c-btn signup__btn">Sign Up</button>
+
+                @Html.AntiForgeryToken()
+            }
+        </div>
+
+        @Html.Partial("/Views/Shared/SignForm/_SignFormSocialLinks.cshtml")
+    </div>
+
+    <div class="signup__bottom">
+        By signing up I agree to AussieLink's <a href="#" class="c-link">Terms of Use</a> and
+        <a href="#" class="c-link">Privacy Policy</a> , including <a href="#" class="c-link">Cookie Use</a>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

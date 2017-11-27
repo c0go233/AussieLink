@@ -1,0 +1,16 @@
+﻿
+@{ 
+    var postType = Model.PostType;
+    var JobSelected = postType == "Job" ? "true" : "false";
+    var ShareSelected = postType == "Share" ? "true" : "false";
+    var SecondhandSelected = postType == "Second Hand" ? "true" : "false";
+}
+
+<div class="post-type__cntr">
+    <p class="c-left-bar__header">POST TYPE</p>
+    <ul>
+        <li><a href="@Url.Action("JobPost", "Post")" class="post-type__link fx-spc-btw" aria-selected=@(JobSelected)>Job</a></li>
+        <li><a href="@Url.Action("SharePost", "Post")" class="post-type__link fx-spc-btw" aria-selected=@(ShareSelected)>Share</a></li>
+        <li><a href="#" class="post-type__link fx-spc-btw" aria-selected=@(SecondhandSelected)>Secondhand Goods</a></li>
+    </ul>
+</div>

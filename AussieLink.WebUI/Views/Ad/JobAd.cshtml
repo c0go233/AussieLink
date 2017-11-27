@@ -1,0 +1,47 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.JobAdVM
+
+@{
+    ViewBag.Title = "JobAd";
+}
+
+
+<div id="ad-detail-page" class="c-mc">
+
+</div>
+
+
+@*==================c-mc for adlist==========================================================*@
+
+<div id="ad-list-page" class="c-mc">
+    <div class="c-mc__cntr c-mc__cntr-mg-b fx fx-algn-start job-ad__cntr ">
+        <div class="c-mc__left-filter">
+            @Html.Partial("~/Views/Shared/Ad/_JobAdFilter.cshtml", Model.JobAdFilterVM)
+        </div>
+
+        <div class="c-mc__center fx-1">
+            <div class="ad-page">
+                @Html.Partial("~/Views/Shared/Ad/_AdTop.cshtml", Model.JobAdFilterVM)
+                <div class="ad-list__cntr">
+                    <ul id="ad-list" class="ad-list"></ul>
+                    @Html.Partial("~/Views/Shared/Ad/_AdNoResult.cshtml")
+                    @Html.Partial("~/Views/Shared/Ad/_ProgressBar.cshtml")
+                </div>
+            </div>
+            <div class="pager">
+                @Html.HiddenFor(m => m.PageIndex)
+                <div id="pager-cntr" class="pager__cntr"></div>
+            </div>
+            @Html.HiddenFor(m => m.CurrentPostId)
+        </div>
+
+        <div class="c-mc__right"></div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/Content/Resources/JavaScript/AdScripts/adScript.js")
+    @Scripts.Render("~/Content/Resources/JavaScript/AdScripts/jobAdScript.js")
+
+}
+

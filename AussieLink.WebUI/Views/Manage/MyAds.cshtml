@@ -1,0 +1,73 @@
+﻿@model AussieLink.Contracts.ViewModels.ManageAdViews.ManageAdVM
+
+@{
+    ViewBag.Title = "MyAds";
+}
+
+<div class="c-mc">
+    <div class="c-mc__cntr fx c-mc__cntr-mg-b">
+        <div class="c-mc__left"></div>
+        <div class="c-mc__center fx-1">
+            <div class="mp-cntr">
+                @Html.Partial("~/Views/Shared/Manage/_ManagePageTop.cshtml")
+                <div class="mp-body">
+                    <div class="fx-spc-btw fx-algn-center mng-ad__top">
+                        <span><span class="mng-ad__post-number">@Model.TotalPostCount</span> Posts</span>
+                        @Html.DropDownListFor(m => m.PostType, new SelectList(Model.PostTypes, "Name", "Name"), "Post Type", new { @class = "select-box mng-ad__select-box"})
+                    </div>
+                        @if(Model.Posts.Count() == 0)
+                        {
+                            <div>no post to display</div>
+                        }
+                        else
+                        {
+                            <ul>
+                                @foreach(var post in Model.Posts)
+                                {
+                                    <li class="mng-ad__item">
+                                        <div class="mng-ad__item-top fx-spc-btw">
+                                            <div class="mng-ad__title-wraper fx fx-algn-center">
+                                                <a href="@Url.Action("AdDetail", "Ad", new { currentPostId = post.PostId, returnUrl = Request.Url.PathAndQuery, postType = post.PostType })" class="c-link mng-ad__title text-over-ellipsis">@post.Title</a>
+                                                @if (post.Complete)
+                                                {
+                                                    <span class="complete-badge c-mg-l-5">C<span class="complete-badge__hidable">ompleted</span></span>
+                                                }
+                                            </div>
+
+                                            <span class="mng-ad__post-type">@post.PostType</span>
+                                        </div>
+
+                                        <div class="fx-spc-btw mng-ad__item-bottom">
+                                            <span class="mng-ad__date">@post.DateCreated.ToShortDateString()</span>
+                                            <div class="mng-ad__item-btn-wraper">
+                                                <a href="@Url.Action("DeleteManagePost", "Post", new { currentPostId = post.PostId, returnUrl = Request.Url.PathAndQuery, postType = post.PostType })" class="c-gray-link">Delete</a>
+                                                @if (!post.Complete)
+                                                {
+                                                    <a href="@Url.Action("CompleteManagePost", "Post", new { currentPostId = post.PostId, returnUrl = Request.Url.PathAndQuery, postType = post.PostType })" class="c-gray-link">Complete</a>
+                                                }
+                                                <a href="@Url.Action("EditManagePost", "Post", new { currentPostId = post.PostId, returnUrl = Request.Url.PathAndQuery, postType = post.PostType })" class="c-gray-link">Edit</a>
+                                                @if (post.Complete)
+                                                {
+                                                    <a href="@Url.Action("RepostManagePost", "Post", new { currentPostId = post.PostId, returnUrl = Request.Url.PathAndQuery, postType = post.PostType })" class="c-gray-link">Repost</a>
+                                                }
+                                            </div>
+                                        </div>
+                                    </li>   
+                                }
+                            </ul>
+                        }
+                </div>
+            </div>
+
+            @Html.Partial("_Pager", Model.Pager)
+
+        </div>
+        <div class="c-mc__right"></div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    @Scripts.Render("~/Content/Resources/JavaScript/manageScript.js")
+}

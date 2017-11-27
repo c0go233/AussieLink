@@ -1,0 +1,186 @@
+﻿@model AussieLink.Contracts.ViewModels.PostViewModels.SharePostViewModels.SharePostVM
+
+@{
+    ViewBag.Title = "SharePost";
+
+    var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
+    serializer.MaxJsonLength = Int32.MaxValue;
+    var storedPicturesInJson = serializer.Serialize(Model.SavedPictures);
+}
+
+<div class="c-mc">
+    <div class="c-mc__cntr fx c-mc__cntr-mg-b">
+        <div class="c-mc__left">@Html.Partial("/Views/Shared/Post/_PostLeftMenu.cshtml")</div>
+        <div class="c-mc__center fx-1">
+            <div class="post__body">
+                <header class="c-post-header">Post Your Ad</header>
+
+                <form id="post-form">
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.PlaceId, new { @class = "post__label" })
+                            @Html.DropDownListFor(m => m.PlaceId, new SelectList(Model.SharePostCategories.Places, "PlaceId", "Name"), "Select Place", new { @class = "select-box fx-1" })
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.PlaceId)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.Suburb, new { @class = "post__label" })
+                            <select class="select-box fx-1 c-inactive-select" data-val="true" data-val-required="The Suburb field is required." id="Suburb" name="Suburb">
+                            </select>
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.Suburb)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.Price, new { @class = "post__label" })
+                            <div class="fx-1 p-relative">
+                                <i class="ion-social-usd sh-post__price-icon"></i>
+                                @Html.EditorFor(m => m.Price, new { htmlAttributes = new { @class = "form-input sh-post__price-input" } })
+                            </div>
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.Price)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.Gender, new { @class = "post__label" })
+                            @Html.DropDownListFor(m => m.Gender, new SelectList(Model.SharePostCategories.Genders, "Name", "Name"), "Select Gender Preference", new { @class = "select-box fx-1" })
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.Gender)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.DateAvailableFrom, new { @class = "post__label" })
+                            @Html.EditorFor(m => m.DateAvailableFrom, new { htmlAttributes = new { @class = "form-input fx-1 sh-post__date-picker-input", id = "sh-date-picker", @readonly = true } })
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.DateAvailableFrom)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.ShareType, new { @class = "post__label" })
+                            @Html.DropDownListFor(m => m.ShareType, new SelectList(Model.SharePostCategories.ShareTypes, "Name", "Name"), "Select Share Type", new { @class = "select-box fx-1" })
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.ShareType)
+                        </div>
+                    </div>
+
+                    @Html.Partial("/Views/Shared/Post/_PostCommonInputs.cshtml", Model)
+
+                    <div class="post__input-section sh-post__input-section">
+                        <div class="post__input-cntr fx-algn-start fx">
+                            <label class="post__label">Picture</label>
+
+                            <div id="drop-zone" class="c-drop-zone fx-1">
+                                <div class="c-drop-zone__header">
+                                    <i class="ion-upload c-drop-zone__icon"></i>
+                                    <p class="c-drop-zone__title c-mg-b-5">Drag & Drop Files</p>
+                                    <p>Or</p>
+                                </div>
+
+                                <div id="c-drop-zone__pic-cntr" class="c-drop-zone__pic-cntr">
+
+                                </div>
+
+                                <label for="pic-file-input" class="c-btn c-drop-zone__browse-btn">Browse</label>
+                                <input multiple type="file" id="pic-file-input" class="c-drop-zone__file-input"/>
+                            </div>
+
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            <span id="sh-post-input-file-val-error" class="field-validation-error"></span>
+                        </div>
+                    </div>
+
+                    <div class="post__submit-btn-cntr">
+                        <button id="post-sbmt-btn" class="c-btn post__submit-btn">POST</button>
+                        <div class="c-mg-t-10" data-valmsg-for="general-error"></div>
+                    </div>
+
+                    @Html.HiddenFor(m => m.PostId)
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(m => m.Suburb)
+                </form>
+
+            </div>
+        </div>
+        <div class="c-mc__right"></div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        var storedPictures = @Html.Raw(storedPicturesInJson);
+
+        var SydneySuburbs = @Html.Raw(Json.Encode(Model.SharePostCategories.SydneySuburbs));
+        var MelbourneSuburbs = @Html.Raw(Json.Encode(Model.SharePostCategories.MelbourneSuburbs));
+        var BrisbaneSuburbs = @Html.Raw(Json.Encode(Model.SharePostCategories.BrisbaneSuburbs));
+        var AdelaideSuburbs = @Html.Raw(Json.Encode(Model.SharePostCategories.AdelaideSuburbs));
+        var PerthSuburbs = @Html.Raw(Json.Encode(Model.SharePostCategories.PerthSuburbs));
+    </script>
+
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+      rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+    @Scripts.Render("~/Content/Resources/JavaScript/postScript.js")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+@*<div id="sh-post-pic-box" class="fx-1 sh-post__pic-box">
+
+        <div class="sh-post__pic-input-wraper p-relative fx-spc-btw fx-algn-center" aria-selected="false">
+            <div class="sh-post__pic-btn-wraper fx fx-algn-center">
+                <label class="c-btn c-btn-border sh-post__pic-add-btn c-mg-r-5" for="picture-0"><i class="ion-upload c-mg-r-5 sh-post__add-icon"></i>Add Picture</label>
+                <input class="sh-post__file-input" type="file" name="Pictures[0]" id="picture-0" />
+            </div>
+        </div>
+
+    </div>*@
+
+
+
+@*@using (Html.BeginForm("SharePost", "Post", FormMethod.Post, new { enctype = "multipart/form-data", returnUrl = Request.QueryString["returnUrl"] }))
+{
+
+
+
+}*@
+
+
+@*@using (Html.BeginForm("SharePost", "Post"))
+    {
+        <div class="post__input-section">
+            <div class="post__input-cntr fx">
+                @Html.LabelFor(m => m.PlaceId, new { @class = "post__label" })
+                @Html.DropDownListFor(m => m.PlaceId, new SelectList(Model.SharePostCategories.Places, "PlaceId", "Name"), "Select Place", new { @class = "select-box fx-1" })
+            </div>
+            <div class="post__error-msg-cntr">
+                @Html.ValidationMessageFor(m => m.PlaceId)
+            </div>
+        </div>
+
+        <input type="file" id="file-input" />
+
+        <button id="testbtn">Submit</button>
+        @Html.AntiForgeryToken()
+    }*@

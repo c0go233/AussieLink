@@ -1,0 +1,318 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D3D9C0C-7462-4895-9FC3-B6F6F5D1711A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AussieLink.DAL</RootNamespace>
+    <AssemblyName>AussieLink.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity.Design" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\DataContext.cs" />
+    <Compile Include="EntityConfigurations\JobPostConfiguration.cs" />
+    <Compile Include="EntityConfigurations\ResetPasswordLinkConfiguration.cs" />
+    <Compile Include="EntityConfigurations\UserConfiguration.cs" />
+    <Compile Include="Migrations\201703031016224_InitialModel.cs" />
+    <Compile Include="Migrations\201703031016224_InitialModel.Designer.cs">
+      <DependentUpon>201703031016224_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703031025358_PopulatePlaceCategory.cs" />
+    <Compile Include="Migrations\201703031025358_PopulatePlaceCategory.Designer.cs">
+      <DependentUpon>201703031025358_PopulatePlaceCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703031026108_PopulateSalaryTypeCategory.cs" />
+    <Compile Include="Migrations\201703031026108_PopulateSalaryTypeCategory.Designer.cs">
+      <DependentUpon>201703031026108_PopulateSalaryTypeCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703031027098_PopulateContractTypeCategory.cs" />
+    <Compile Include="Migrations\201703031027098_PopulateContractTypeCategory.Designer.cs">
+      <DependentUpon>201703031027098_PopulateContractTypeCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703031027447_PopulateJobTypeCategory.cs" />
+    <Compile Include="Migrations\201703031027447_PopulateJobTypeCategory.Designer.cs">
+      <DependentUpon>201703031027447_PopulateJobTypeCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703031028169_PopulateDayCategory.cs" />
+    <Compile Include="Migrations\201703031028169_PopulateDayCategory.Designer.cs">
+      <DependentUpon>201703031028169_PopulateDayCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703031029070_PopulateWeeklySalaryCategory.cs" />
+    <Compile Include="Migrations\201703031029070_PopulateWeeklySalaryCategory.Designer.cs">
+      <DependentUpon>201703031029070_PopulateWeeklySalaryCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703031029429_PopulateHourlySalaryCategory.cs" />
+    <Compile Include="Migrations\201703031029429_PopulateHourlySalaryCategory.Designer.cs">
+      <DependentUpon>201703031029429_PopulateHourlySalaryCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703031030105_PopulatePostTypeCategory.cs" />
+    <Compile Include="Migrations\201703031030105_PopulatePostTypeCategory.Designer.cs">
+      <DependentUpon>201703031030105_PopulatePostTypeCategory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703071300288_ChangeNameOfPostType.cs" />
+    <Compile Include="Migrations\201703071300288_ChangeNameOfPostType.Designer.cs">
+      <DependentUpon>201703071300288_ChangeNameOfPostType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703090718483_AddCancelToPost.cs" />
+    <Compile Include="Migrations\201703090718483_AddCancelToPost.Designer.cs">
+      <DependentUpon>201703090718483_AddCancelToPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100133251_AddGender.cs" />
+    <Compile Include="Migrations\201703100133251_AddGender.Designer.cs">
+      <DependentUpon>201703100133251_AddGender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100135011_PopulateGender.cs" />
+    <Compile Include="Migrations\201703100135011_PopulateGender.Designer.cs">
+      <DependentUpon>201703100135011_PopulateGender.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100148331_AddState.cs" />
+    <Compile Include="Migrations\201703100148331_AddState.Designer.cs">
+      <DependentUpon>201703100148331_AddState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100204403_PopulateState.cs" />
+    <Compile Include="Migrations\201703100204403_PopulateState.Designer.cs">
+      <DependentUpon>201703100204403_PopulateState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100214306_AddSuburb.cs" />
+    <Compile Include="Migrations\201703100214306_AddSuburb.Designer.cs">
+      <DependentUpon>201703100214306_AddSuburb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100216447_ReseedSuburb.cs" />
+    <Compile Include="Migrations\201703100216447_ReseedSuburb.Designer.cs">
+      <DependentUpon>201703100216447_ReseedSuburb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100219218_PopulateSuburb.cs" />
+    <Compile Include="Migrations\201703100219218_PopulateSuburb.Designer.cs">
+      <DependentUpon>201703100219218_PopulateSuburb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100535026_DeleteState.cs" />
+    <Compile Include="Migrations\201703100535026_DeleteState.Designer.cs">
+      <DependentUpon>201703100535026_DeleteState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100616220_PopulateSydneySuburbs.cs" />
+    <Compile Include="Migrations\201703100616220_PopulateSydneySuburbs.Designer.cs">
+      <DependentUpon>201703100616220_PopulateSydneySuburbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100717281_AddMelbourneSuburb.cs" />
+    <Compile Include="Migrations\201703100717281_AddMelbourneSuburb.Designer.cs">
+      <DependentUpon>201703100717281_AddMelbourneSuburb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100729567_PopulateBrisbaneSuburbs.cs" />
+    <Compile Include="Migrations\201703100729567_PopulateBrisbaneSuburbs.Designer.cs">
+      <DependentUpon>201703100729567_PopulateBrisbaneSuburbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100740266_PopulateAdleidSuburbs.cs" />
+    <Compile Include="Migrations\201703100740266_PopulateAdleidSuburbs.Designer.cs">
+      <DependentUpon>201703100740266_PopulateAdleidSuburbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100801019_PopulatePerthSuburbs.cs" />
+    <Compile Include="Migrations\201703100801019_PopulatePerthSuburbs.Designer.cs">
+      <DependentUpon>201703100801019_PopulatePerthSuburbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100953331_AddShareType.cs" />
+    <Compile Include="Migrations\201703100953331_AddShareType.Designer.cs">
+      <DependentUpon>201703100953331_AddShareType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703100954407_PopulateShareType.cs" />
+    <Compile Include="Migrations\201703100954407_PopulateShareType.Designer.cs">
+      <DependentUpon>201703100954407_PopulateShareType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703101015101_PopulateOthersForSuburbs.cs" />
+    <Compile Include="Migrations\201703101015101_PopulateOthersForSuburbs.Designer.cs">
+      <DependentUpon>201703101015101_PopulateOthersForSuburbs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703101026150_AddAddress.cs" />
+    <Compile Include="Migrations\201703101026150_AddAddress.Designer.cs">
+      <DependentUpon>201703101026150_AddAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703101037171_ReseedAddress.cs" />
+    <Compile Include="Migrations\201703101037171_ReseedAddress.Designer.cs">
+      <DependentUpon>201703101037171_ReseedAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703101123275_AddSharePost.cs" />
+    <Compile Include="Migrations\201703101123275_AddSharePost.Designer.cs">
+      <DependentUpon>201703101123275_AddSharePost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703180632187_AddPicture.cs" />
+    <Compile Include="Migrations\201703180632187_AddPicture.Designer.cs">
+      <DependentUpon>201703180632187_AddPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201703190028298_AddPictureTypeToPicture.cs" />
+    <Compile Include="Migrations\201703190028298_AddPictureTypeToPicture.Designer.cs">
+      <DependentUpon>201703190028298_AddPictureTypeToPicture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\CommentRepository.cs" />
+    <Compile Include="Repositories\JobPostCategoryRepositories.cs" />
+    <Compile Include="Repositories\JobPostRepositories.cs" />
+    <Compile Include="Repositories\PictureRepository.cs" />
+    <Compile Include="Repositories\PlaceRepository.cs" />
+    <Compile Include="Repositories\PostTypeRepository.cs" />
+    <Compile Include="Repositories\ResetPasswordLinkRepository.cs" />
+    <Compile Include="Repositories\SharePostRepositories.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="UnitOfWork\JobPostCategoryUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\JobPostUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\SharePostUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AussieLink.Contracts\AussieLink.Contracts.csproj">
+      <Project>{795396fa-a91e-4c68-b286-8638b7b96297}</Project>
+      <Name>AussieLink.Contracts</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703031016224_InitialModel.resx">
+      <DependentUpon>201703031016224_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703031025358_PopulatePlaceCategory.resx">
+      <DependentUpon>201703031025358_PopulatePlaceCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703031026108_PopulateSalaryTypeCategory.resx">
+      <DependentUpon>201703031026108_PopulateSalaryTypeCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703031027098_PopulateContractTypeCategory.resx">
+      <DependentUpon>201703031027098_PopulateContractTypeCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703031027447_PopulateJobTypeCategory.resx">
+      <DependentUpon>201703031027447_PopulateJobTypeCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703031028169_PopulateDayCategory.resx">
+      <DependentUpon>201703031028169_PopulateDayCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703031029070_PopulateWeeklySalaryCategory.resx">
+      <DependentUpon>201703031029070_PopulateWeeklySalaryCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703031029429_PopulateHourlySalaryCategory.resx">
+      <DependentUpon>201703031029429_PopulateHourlySalaryCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703031030105_PopulatePostTypeCategory.resx">
+      <DependentUpon>201703031030105_PopulatePostTypeCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703071300288_ChangeNameOfPostType.resx">
+      <DependentUpon>201703071300288_ChangeNameOfPostType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703090718483_AddCancelToPost.resx">
+      <DependentUpon>201703090718483_AddCancelToPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100133251_AddGender.resx">
+      <DependentUpon>201703100133251_AddGender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100135011_PopulateGender.resx">
+      <DependentUpon>201703100135011_PopulateGender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100148331_AddState.resx">
+      <DependentUpon>201703100148331_AddState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100204403_PopulateState.resx">
+      <DependentUpon>201703100204403_PopulateState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100214306_AddSuburb.resx">
+      <DependentUpon>201703100214306_AddSuburb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100216447_ReseedSuburb.resx">
+      <DependentUpon>201703100216447_ReseedSuburb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100219218_PopulateSuburb.resx">
+      <DependentUpon>201703100219218_PopulateSuburb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100535026_DeleteState.resx">
+      <DependentUpon>201703100535026_DeleteState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100616220_PopulateSydneySuburbs.resx">
+      <DependentUpon>201703100616220_PopulateSydneySuburbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100717281_AddMelbourneSuburb.resx">
+      <DependentUpon>201703100717281_AddMelbourneSuburb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100729567_PopulateBrisbaneSuburbs.resx">
+      <DependentUpon>201703100729567_PopulateBrisbaneSuburbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100740266_PopulateAdleidSuburbs.resx">
+      <DependentUpon>201703100740266_PopulateAdleidSuburbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100801019_PopulatePerthSuburbs.resx">
+      <DependentUpon>201703100801019_PopulatePerthSuburbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100953331_AddShareType.resx">
+      <DependentUpon>201703100953331_AddShareType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703100954407_PopulateShareType.resx">
+      <DependentUpon>201703100954407_PopulateShareType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703101015101_PopulateOthersForSuburbs.resx">
+      <DependentUpon>201703101015101_PopulateOthersForSuburbs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703101026150_AddAddress.resx">
+      <DependentUpon>201703101026150_AddAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703101037171_ReseedAddress.resx">
+      <DependentUpon>201703101037171_ReseedAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703101123275_AddSharePost.resx">
+      <DependentUpon>201703101123275_AddSharePost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703180632187_AddPicture.resx">
+      <DependentUpon>201703180632187_AddPicture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201703190028298_AddPictureTypeToPicture.resx">
+      <DependentUpon>201703190028298_AddPictureTypeToPicture.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

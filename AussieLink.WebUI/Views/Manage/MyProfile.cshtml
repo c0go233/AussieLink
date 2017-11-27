@@ -1,0 +1,51 @@
+﻿@model AussieLink.Contracts.ViewModels.ManageAdViews.ManageProfileVM
+
+@{
+    ViewBag.Title = "MyProfile";
+}
+
+<div class="c-mc">
+    <div class="c-mc__cntr fx c-mc__cntr-mg-b">
+        <div class="c-mc__left"></div>
+        <div class="c-mc__center fx-1">
+            <div class="mp-cntr">
+                @Html.Partial("~/Views/Shared/Manage/_ManagePageTop.cshtml")
+                <div class="mp-body">
+                    <div class="mng-prf__cntr">
+                        @using (Html.BeginForm("MyProfile", "Manage"))
+                        {
+                            <div class="signup__input-cntr">
+                                @Html.LabelFor(m => m.Email, new { @class = "mng-prf__label" })
+                                @Html.EditorFor(m => m.Email, new { htmlAttributes = new { @class = "mng-prf__fake-input-box", @readonly="true" } })
+                            </div>
+
+                            <div class="signup__input-cntr">
+                                @Html.LabelFor(m => m.Name, new { @class = "mng-prf__label" })
+                                @Html.EditorFor(m => m.Name, new { htmlAttributes = new { placeholder = "Name", @class = "form-input signup__input" } })
+                                @Html.ValidationMessageFor(m => m.Name)
+                            </div>
+
+                            <div class="mng-prf__pwd-cntr">
+                                <label class="mng-prf__label">Password</label>
+                                <div class="mg-prf__pwd mng-prf__fake-input-box">
+                                    ************************
+                                </div>
+                                <div>
+                                    Want to change password? <a href="@Url.Action("ForgotPassword", "Account")" class="c-link">Change Password</a>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="c-btn signup__btn">Save</button>
+
+                            @Html.AntiForgeryToken()
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-mc__right"></div>
+    </div>
+</div>
+
+
+

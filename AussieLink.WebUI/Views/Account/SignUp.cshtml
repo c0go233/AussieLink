@@ -1,0 +1,122 @@
+﻿@model AussieLink.Contracts.ViewModels.UserSignupVM
+
+@{
+    ViewBag.Title = "SignUp";
+}
+
+<section class="signup">
+    <div class="signup__cntr">
+        @Html.Partial("/Views/Shared/SignForm/_SignFormTop.cshtml")
+        @Html.ValidationSummary(true)
+        <div class="signup__body fx">
+            <div class="signup__form-cntr fx-1">
+                @using (Html.BeginForm("SignUp", "Account", new { ReturnUrl = Request.QueryString["ReturnUrl"] }))
+                {
+                    <div class="signup__input-cntr">
+                        @Html.EditorFor(m => m.Email, new { htmlAttributes = new { placeholder = "Email", @class = "form-input signup__input" } })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+                        <div class="signup__input-cntr">
+                            @Html.EditorFor(m => m.Name, new { htmlAttributes = new { placeholder = "Name", @class = "form-input signup__input" } })
+                            @Html.ValidationMessageFor(m => m.Name)
+                        </div>
+                        <div class="signup__input-cntr">
+                            @Html.EditorFor(m => m.Password, new { htmlAttributes = new { placeholder = "Password", @class = "form-input signup__input" } })
+                            @Html.ValidationMessageFor(m => m.Password)
+                        </div>
+                        <div class="signup__input-cntr">
+                            @Html.EditorFor(m => m.ConfirmPassword, new { htmlAttributes = new { placeholder = "Confirm Password", @class = "form-input signup__input" } })
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                        </div>
+
+                        <button type="submit" class="c-btn signup__btn">Sign Up</button>
+
+                        @Html.AntiForgeryToken()
+                }
+            </div>
+
+            <div class="signup__social-links fx-1">
+                <a href="@Url.Action("SignUpWithFacebook", "FacebookAccount", new { ReturnUrl = Request.QueryString["ReturnUrl"] })" class="social-link social-link-facebook signup__social-link">
+                    <i class="ion-social-facebook social-link-icon"></i>
+                    <span class="">Sign Up with Facebook</span>
+                </a>
+                <a href="@Url.Action("SignUpWithGoogle", "GoogleAccount", new { ReturnUrl = Request.QueryString["ReturnUrl"] })" class="social-link social-link-google signup__social-link">
+                    <i class="ion-social-googleplus social-link-icon"></i>
+                    <span class="">Sign Up with Google</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="signup__bottom">
+            By signing up I agree to AussieLink's <a href="#" class="c-link">Terms of Use</a> and
+            <a href="#" class="c-link">Privacy Policy</a> , including <a href="#" class="c-link">Cookie Use</a>
+        </div>
+    </div>
+
+</section>
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+@*
+
+        <section class="signup">
+        <div class="signup__cntr">
+            <div class="signup__top fx">
+                <img class="signup__logo-image" src="~/Content/Resources/Image/logo-blue.png" />
+                <span class="signup__logo-letters">AUSSIE<span class="color-main-blue">LINK</span></span>
+            </div>
+            @Html.ValidationSummary(true)
+            <div class="signup__body fx">
+                <div class="signup__form-cntr fx-1">
+                    @using (Html.BeginForm("SignUp", "Account"))
+                    {
+                        <div class="signup__input-cntr">
+                            @Html.EditorFor(m => m.Email, new { htmlAttributes = new { placeholder = "Email", @class = "form-input signup__input" } })
+                            @Html.ValidationMessageFor(m => m.Email)
+                        </div>
+                        <div class="signup__input-cntr">
+                            @Html.EditorFor(m => m.Name, new { htmlAttributes = new { placeholder = "Name", @class = "form-input signup__input" } })
+                            @Html.ValidationMessageFor(m => m.Name)
+                        </div>
+                        <div class="signup__input-cntr">
+                            @Html.EditorFor(m => m.Password, new { htmlAttributes = new { placeholder = "Password", @class = "form-input signup__input" } })
+                            @Html.ValidationMessageFor(m => m.Password)
+                        </div>
+                        <div class="signup__input-cntr">
+                            @Html.EditorFor(m => m.ConfirmPassword, new { htmlAttributes = new { placeholder = "Confirm Password", @class = "form-input signup__input" } })
+                            @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                        </div>
+
+                        <button type="submit" class="c-btn signup__btn">Sign Up</button>
+
+                        @Html.AntiForgeryToken()
+                    }
+                </div>
+
+                <div class="signup__social-links fx-1">
+                    <a href="@Url.Action("SignUpWithFacebook", "FacebookAccount")" class="social-link social-link-facebook signup__social-link">
+                        <i class="ion-social-facebook social-link-icon"></i>
+                        <span class="">Sign up with Facebook</span>
+                    </a>
+                    <a href="@Url.Action("SignUpWithGoogle", "GoogleAccount")" class="social-link social-link-google signup__social-link">
+                        <i class="ion-social-googleplus social-link-icon"></i>
+                        <span class="">Sign up with Google</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="signup__bottom">
+                By signing up I agree to AussieLink's <a href="#" class="c-link">Terms of Use</a> and
+                <a href="#" class="c-link">Privacy Policy</a> , including <a href="#" class="c-link">Cookie Use</a>
+            </div>
+        </div>
+    </section>
+
+*@

@@ -1,0 +1,30 @@
+﻿<div class="mb-nav">
+    <div class="mb-nav__logo-cntr">
+        <a href="@Url.Action("Index", "Home")" class="fx mast-header__logo-link">
+            <img class="mast-header__logo-img" src="~/Content/Resources/Image/logo-blue.png" alt="aussie link logo" />
+            <span class="mast-header__logo-letter">AUSSIE<span class="color-main-blue">LINK</span></span>
+        </a>
+    </div>
+    <ul class="mb-nav__list">
+        <li class="mb-nav__category"><i class="ion-link c-mg-r-5"></i> Links</li>
+        <li><a href="@Url.Action("Index", "Home")" class="mast-header__nav-link mb-nav__link"><i class="ion-home mb-nav__icon"></i>Home</a></li>
+        <li><a href="@Url.Action("About", "Home")" class="mast-header__nav-link mb-nav__link"><i class="ion-information-circled mb-nav__icon"></i>About Us</a></li>
+
+        <li class="mb-nav__category"><i class="ion-person c-mg-r-5"></i> Account</li>
+        @if (Request.IsAuthenticated)
+        {
+            <li><a href="#" class="mast-header__nav-link mb-nav__link"><i class="ion-chatbubbles mb-nav__icon"></i>Message</a></li>
+            <li><a href="@Url.Action("MyAds", "Manage")" class="mast-header__nav-link mb-nav__link"><i class="ion-compose mb-nav__icon"></i>Manage Ads</a></li>
+            <li><a href="@Url.Action("MyProfile", "Manage")" class="mast-header__nav-link mb-nav__link"><i class="ion-android-person mb-nav__icon"></i>My profile</a></li>
+            <li><a href=@Url.Action("SignOut", "Account") class="mast-header__nav-link mb-nav__link"><i class="ion-log-out mb-nav__icon"></i>Logout</a></li>
+        }
+        else
+        {
+            <li><a href="@Url.Action("SignIn", "Account")" class="mast-header__nav-link mb-nav__link"><i class="ion-log-out mb-nav__icon"></i>Sign In</a></li>
+            <li><a href="@Url.Action("SignUp", "Account")" class="mast-header__nav-link mb-nav__link"><i class="ion-edit mb-nav__icon"></i>Sign Up</a></li>
+        }
+
+        <li><a href="@Url.Action("Post", "Post")" class="mast-header__nav-post-btn mb-nav__post-btn">Post Ad</a></li>
+    </ul>
+</div>
+    

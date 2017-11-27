@@ -1,0 +1,26 @@
+﻿@model AussieLink.Contracts.ViewModels.PostViewModels.BasePostVM
+
+<div class="post__input-section">
+    <div class="post__input-cntr fx">
+        @Html.LabelFor(m => m.Title, new { @class = "post__label" })
+        @Html.EditorFor(m => m.Title, new { htmlAttributes = new { @class = "form-input fx-1" } })
+    </div>
+    <div class="post__error-msg-cntr">
+        @Html.ValidationMessageFor(m => m.Title)
+    </div>
+</div>
+
+<div class="post__input-section">
+    <div class="post__input-cntr fx post__desc-input-cntr">
+        @Html.LabelFor(m => m.Description, new { @class = "post__label" })
+        @Html.TextAreaFor(m => m.Description, new {  @class = "form-input fx-1 form-text-area c-mg-b-5"  })
+    </div>
+    <div class="post__error-msg-cntr">
+        @Html.ValidationMessageFor(m => m.Description)
+    </div>
+</div>
+
+
+
+
+

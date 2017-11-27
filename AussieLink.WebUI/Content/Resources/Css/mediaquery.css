@@ -1,0 +1,338 @@
+﻿
+@media only screen and (max-width: 1097px)
+{
+    /*-------C-CONTAINERS-----------*/
+    .c-mc__right {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 867px)
+{
+    /*-------C-CONTAINERS-----------*/
+    .c-mc__cntr {
+        padding: 0;
+    }
+
+    .c-mc__left {
+        display: none;
+    }
+
+    .c-mc__left-filter {
+        position: fixed;
+        transform: translate3d(-100%, 0, 0);
+        width: 240px;
+        max-width: 240px;
+        padding-left: 10px;
+    }
+
+    .c-mc__cntr.mb-filter-open {
+        transform: translate3d(240px, 0, 0);
+    }
+
+    .oflow-x-hidden {
+        overflow-x: hidden;
+    }
+
+    /*--------AD-TOP-----------------*/
+
+    .quick-search-input {
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-left: none;
+    }
+
+    .ad-top__mb-filter-btn {
+        display:block;
+    }
+
+}
+
+@media only screen and (max-width: 780px)
+{
+    /*----------MAST-HEADER-----------*/
+    .mast-header {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 740px)
+{
+    /*----------MOBILE-NAV------------*/
+    .mast-header__nav-list {
+        display: none;
+    }
+
+    .mast-header__mb-nav-btn {
+        display: block;
+    }
+
+    .mb-nav.mobile-nav-show  {
+        transform: translate3d(0%, 0, 0);
+    }
+
+    .mask-open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .oflow-y-hidden {
+        overflow-y: hidden;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 630px)
+{
+    /*----------------SIGN IN PAGE------------------------*/
+    .signin .signup__body {
+        flex-direction: column;
+    }
+
+    .signin .social-link-icon {
+        padding-left: 0;
+    }
+
+    .signin .signup__form-cntr {
+        padding-right: 0px;
+        margin-right: 0px;
+        border-right: none;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 30px;
+    }
+
+    .signin .signup__social-link {
+        text-align: center;
+    }
+
+    /*----------------AD-LIST------------------------*/
+    .ad-list__ad-body {
+        display: block;
+    }
+
+    .ad-list__ad-title {
+        font-size: 15px;
+    }
+
+    .ad-list__ad-desc {
+        display: none;
+    }
+
+    .ad-list__ad-body-left {
+        padding-right: 0px;
+    }
+
+    .ad-list__ad-body-right {
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .ad-list__ad-footer {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 617px)
+{
+    /*-------POST-----------*/
+    .post__input-cntr {
+        flex-direction: column;
+        align-items:initial;
+    }
+
+    .post__label {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .post__error-msg-cntr {
+        padding-left: 0px;
+    }
+
+}
+
+@media only screen and (max-width: 580px)
+{
+    /*-------MENU-BAR-----------*/
+    .menu-bar__mb-menu-btn {
+        color: #fff;
+        padding: 13px 40px;
+        cursor: pointer;
+        font-weight: 500;
+        display: block;
+    }
+
+    .menu-bar__list {
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.1s ease-in-out;
+    }
+
+    .menu-bar__item {
+        display: block;
+    }
+
+    .mobile-menu-show {
+        max-height: 400px;
+    }
+
+
+    /*-------DETAIL PAGE-----------*/
+    .c-detail-page__features-body {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 560px)
+{
+    /*---------------SIGNUP PAGE--------------------*/
+    .signup .signup__body {
+        flex-direction: column;
+    }
+
+    .signup__form-cntr {
+        padding-right: 0px;
+        margin-right: 0px;
+        border-right: none;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 30px;
+    }
+
+    .signup__social-link {
+        text-align: center;
+    }
+
+    .signup .social-link-icon {
+        padding-left: 0;
+    }
+
+
+}
+
+@media only screen and (max-width: 540px)
+{
+    /*---------------PAGER--------------------*/
+    .pager__direct-link-letter {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 460px)
+{
+    /*-----------POST------------------*/
+    .post__day-input-cntr {
+        flex-direction: column;
+    }
+
+    .post__day-input-cntr select:first-child {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .post__salary-input-cntr {
+        flex-direction: column;
+    }
+
+    .post__salary-input-cntr select:first-child {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .post__salary-label {
+        flex: 1;
+    }
+
+    .post__salary-inner-input-cntr {
+        flex: 1;
+    }
+
+    .post__input-section {
+        padding-right: 0;
+    }
+
+    /*-------AD DETAIL PAGE------------*/
+    .c-detail-page__bottom {
+        flex-direction: column;
+    }
+
+    .c-detail-page__bottom-post-tools {
+        margin-bottom: 30px;
+    }
+
+    /*-----PAGER-----------------------*/
+    .pager__list li {
+        padding: 15px 15px;
+    }
+
+    .c-pager__list .c-pager__link-box {
+        padding: 15px 15px;
+    }
+
+    /*-------MANAGE-AD------------------------*/
+    .complete-badge__hidable {
+        display: none;
+    }
+
+}
+
+
+@media only screen and (max-width: 400px)
+{
+    /*-----------FORGOT PASSWORD------------------*/
+    .forgot-pwd__header {
+        font-size: 20px;
+    }
+
+    /*---------PAGER------------------------------*/
+    .pager__list li:first-child,
+    .pager__list li:last-child {
+        display: none;
+    }
+
+    .c-pager__list .c-pager__direct-link-item {
+        display: none;
+    }
+
+    /*-------MANAGE-AD------------------------*/
+    .mng-ad__item-top {
+        flex-direction: column;
+    }
+
+    .mng-ad__post-type {
+        margin-left: 0px;
+    }
+
+
+    /*--------MP-TOP------------------------*/
+    .mp-top__nav-list li a[aria-selected='false'] {
+        display: none;
+    }
+
+    .mp-top__nav-list {
+        display: block;
+    }
+
+    .mp-top__nav-list li a[aria-selected='true'] {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 330px)
+{
+    /*-------COMMENT-eidt BOTTOM-----------*/
+    .c-comment__edit-bottom {
+        flex-direction: column;
+        align-items: inherit;
+    }
+}
+
+
+

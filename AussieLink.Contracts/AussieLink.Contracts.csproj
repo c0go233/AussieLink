@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{795396FA-A91E-4C68-B286-8638B7B96297}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AussieLink.Contracts</RootNamespace>
+    <AssemblyName>AussieLink.Contracts</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomValidations\JobPostCustomValidations\MaxSalaryValidation.cs" />
+    <Compile Include="CustomValidations\JobPostCustomValidations\MinDayValidation.cs" />
+    <Compile Include="CustomValidations\JobPostCustomValidations\MinSalaryValidation.cs" />
+    <Compile Include="CustomValidations\JobPostCustomValidations\SalaryTypeValidation.cs" />
+    <Compile Include="Dtos\CommentDto.cs" />
+    <Compile Include="Dtos\CommentRequestDto.cs" />
+    <Compile Include="ExtensionMethods\EnumExtensions.cs" />
+    <Compile Include="Enums\ErrorCode.cs" />
+    <Compile Include="Enums\Keywords.cs" />
+    <Compile Include="Models\AdModels\JobAdModels\HourlySalaryCategory.cs" />
+    <Compile Include="Models\AdModels\JobAdModels\WeeklySalaryCategory.cs" />
+    <Compile Include="Models\CommentModels\Comment.cs" />
+    <Compile Include="Models\Picture.cs" />
+    <Compile Include="Models\PostModels\BasePost.cs" />
+    <Compile Include="Models\PostModels\JobPostModels\ContractType.cs" />
+    <Compile Include="Models\PostModels\JobPostModels\DayCategory.cs" />
+    <Compile Include="Models\PostModels\JobPostModels\JobDay.cs" />
+    <Compile Include="Models\PostModels\JobPostModels\JobPost.cs" />
+    <Compile Include="Models\PostModels\JobPostModels\JobType.cs" />
+    <Compile Include="Models\PostModels\JobPostModels\Salary.cs" />
+    <Compile Include="Models\PostModels\JobPostModels\SalaryType.cs" />
+    <Compile Include="Models\PostModels\Place.cs" />
+    <Compile Include="Models\PostModels\PostType.cs" />
+    <Compile Include="Models\PostModels\SharePostModels\Address.cs" />
+    <Compile Include="Models\PostModels\SharePostModels\Gender.cs" />
+    <Compile Include="Models\PostModels\SharePostModels\SharePost.cs" />
+    <Compile Include="Models\PostModels\SharePostModels\ShareType.cs" />
+    <Compile Include="Models\PostModels\SharePostModels\Suburb.cs" />
+    <Compile Include="Models\ResetPasswordLink.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IBaseRepository.cs" />
+    <Compile Include="Repositories\ICommentRepository.cs" />
+    <Compile Include="Repositories\IJobPostCategoryRepositories.cs" />
+    <Compile Include="Repositories\IJobPostRepositories.cs" />
+    <Compile Include="Repositories\IPictureRepository.cs" />
+    <Compile Include="Repositories\IPlaceRepository.cs" />
+    <Compile Include="Repositories\IPostTypeRepository.cs" />
+    <Compile Include="Repositories\IResetPasswordLinkRepository.cs" />
+    <Compile Include="Repositories\ISharePostRepositories.cs" />
+    <Compile Include="Responses\SaveSharePostResponse.cs" />
+    <Compile Include="Services\ISharePostService.cs" />
+    <Compile Include="UnitOfWork\ISharePostUnitOfWork.cs" />
+    <Compile Include="Repositories\IUserRepository.cs" />
+    <Compile Include="Responses\BaseResponse.cs" />
+    <Compile Include="Responses\CommentSaveResponse.cs" />
+    <Compile Include="Responses\GetManageAdVMResponse.cs" />
+    <Compile Include="Responses\SignInResponse.cs" />
+    <Compile Include="Responses\SignUpResponse.cs" />
+    <Compile Include="Services\IAccountService.cs" />
+    <Compile Include="Services\IBasePostService.cs" />
+    <Compile Include="Services\ICommentService.cs" />
+    <Compile Include="Services\IEmailService.cs" />
+    <Compile Include="Services\IJobAdService.cs" />
+    <Compile Include="Services\IJobPostService.cs" />
+    <Compile Include="Services\IManageService.cs" />
+    <Compile Include="UnitOfWork\IJobPostCategoryUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IJobPostUnitOfWork.cs" />
+    <Compile Include="UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="ViewModels\AdViewModels\BaseAdDetailVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\BaseAdFilterVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\BaseAdVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\GetJobAdVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\JobAdCategoriesVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\JobAdVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\BaseAdPostVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\JobAdDetailVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\JobAdFilterVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\JobAdPostVM.cs" />
+    <Compile Include="ViewModels\AdViewModels\Pager.cs" />
+    <Compile Include="ViewModels\ForgotPasswordVM.cs" />
+    <Compile Include="ViewModels\GoogleAccessToken.cs" />
+    <Compile Include="ViewModels\ManageAdViews\ManageAdPost.cs" />
+    <Compile Include="ViewModels\ManageAdViews\ManageAdPostTypeCategory.cs" />
+    <Compile Include="ViewModels\ManageAdViews\ManageAdVM.cs" />
+    <Compile Include="ViewModels\ManageAdViews\ManageProfileVM.cs" />
+    <Compile Include="ViewModels\PictureVM.cs" />
+    <Compile Include="ViewModels\PostViewModels\BasePostVM.cs" />
+    <Compile Include="ViewModels\PostViewModels\JobCategoriesVM.cs" />
+    <Compile Include="ViewModels\PostViewModels\JobPostDayVM.cs" />
+    <Compile Include="ViewModels\PostViewModels\JobPostSalaryVM.cs" />
+    <Compile Include="ViewModels\PostViewModels\JobPostVM.cs" />
+    <Compile Include="ViewModels\PostViewModels\SharePostViewModels\ErrorVM.cs" />
+    <Compile Include="ViewModels\PostViewModels\SharePostViewModels\SharePostCategories.cs" />
+    <Compile Include="ViewModels\PostViewModels\SharePostViewModels\SharePostVM.cs" />
+    <Compile Include="ViewModels\PostViewModels\SharePostViewModels\SuburbVM.cs" />
+    <Compile Include="ViewModels\ResetPasswordVM.cs" />
+    <Compile Include="ViewModels\UserSigninVM.cs" />
+    <Compile Include="ViewModels\UserSignupVM.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

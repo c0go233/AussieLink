@@ -1,0 +1,18 @@
+﻿@{ 
+    string action = ViewBag.Title;
+    string buttonName = action == "SignUp" ? "Sign Up" : "Sign In";
+    string facebookAction = action == "SignUp" ? "SignUpWithFacebook" : "SignInWithFacebook";
+    string googleAction = action == "SignUp" ? "SignUpWithGoogle" : "SignInWithGoogle";
+}
+
+
+<div class="signup__social-links fx-1">
+    <a href="@Url.Action(facebookAction, "FacebookAccount")" class="social-link social-link-facebook signup__social-link">
+        <i class="ion-social-facebook social-link-icon"></i>
+        <span class="">@(buttonName) with Facebook</span>
+    </a>
+    <a href="@Url.Action(googleAction, "GoogleAccount")" class="social-link social-link-google signup__social-link">
+        <i class="ion-social-googleplus social-link-icon"></i>
+        <span class="">@(buttonName) with Google</span>
+    </a>
+</div>

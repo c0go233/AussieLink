@@ -1,0 +1,31 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.JobAdDetailVM
+
+@{
+    var bottomClass = Model.IsPostOwned ? "fx-spc-btw" : "fx fx-justify-end";
+}
+
+<div class="c-detail-page__bottom @bottomClass">
+    @if (Model.IsPostOwned)
+    {
+        <div class="fx c-detail-page__bottom-post-tools">
+            <a href="@Url.Action("DeleteJobPost", "Post", new { currentPostId = Model.JobAdPostVM.PostId, returnUrl = Model.DeleteCompleteReturnUrl })" class="c-red-link c-pd-mg-bd-r-10"><i class="ion-ios-trash c-mg-r-5"></i>Delete</a>
+            <a href="@Url.Action("EditJobPost", "Post", new { currentPostId = Model.JobAdPostVM.PostId, returnUrl = Model.EditReturnUrl })" class="c-gray-link c-pd-mg-bd-r-10"><i class="ion-edit c-mg-r-5"></i>Edit</a>
+            @if (Model.JobAdPostVM.Complete)
+            {
+                <a href="@Url.Action("RepostJobPost", "Post", new { currentPostId = Model.JobAdPostVM.PostId, returnUrl = Model.EditReturnUrl})" class="c-gray-link"><i class="ion-refresh c-mg-r-5"></i>Repost</a>
+            }
+            else
+            {
+                <a href="@Url.Action("CompleteJobPost", "Post", new { currentPostId = Model.JobAdPostVM.PostId, returnUrl = Model.DeleteCompleteReturnUrl})" class="c-gray-link"><i class="ion-checkmark-round c-mg-r-5"></i>Complete</a>
+            }
+        </div>
+    }
+    @if (Model.NeedBackToList)
+    {
+        <span id="back-to-list-link" class="c-detail-page__bottom-back-link"><i class="ion-android-list c-mg-r-5"></i>Back to List</span>
+    }
+
+</div>
+
+
+

@@ -1,0 +1,16 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.BaseAdFilterVM
+
+<div class="ad-top">
+    <div class="ad-top__quick-search-bar fx">
+        <button id="mb-filter-btn" class="ad-top__mb-filter-btn">Filter <i class="ion-funnel"></i></button>
+        <div class="fx ad-top__quick-search-cntr fx-1">
+            @Html.EditorFor(m => m.Keyword, new { htmlAttributes = new { @class= "form-input quick-search-input", placeholder = "Enter Keywords", id="quick-search-input" } })
+            <button name="Keyword" id="quick-search-btn" class="ion-search c-btn quick-search-btn ad-top__quick-search-btn"></button>
+        </div>
+    </div>
+
+    <div class="ad-top__selected-filter-cntr">
+        <span class="selected-filter-title">Selected Filters: </span>
+        <span class="selected-filters"></span>
+    </div>
+</div>

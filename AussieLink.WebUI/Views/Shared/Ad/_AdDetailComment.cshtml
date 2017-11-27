@@ -1,0 +1,36 @@
+﻿@model AussieLink.Contracts.ViewModels.AdViewModels.BaseAdDetailVM
+
+<div class="c-comment">
+    <div class="c-comment__input-cntr">
+        <header class="c-commnet__input-header fx">
+            <span>Comments</span>
+        </header>
+        @if (Request.IsAuthenticated)
+        {
+            <div class="c-comment__input-body">
+                <textarea id="comment-textarea" class="c-comment__input-textarea form-input"></textarea>
+                <div class="c-comment__bottom-wraper fx-spc-btw fx-algn-center">
+                    <div id="comment-error-wraper">
+                    </div>
+                    <div class="c-commnet__input-body-bottom">
+                        <button id="comment-submit-btn" class="c-btn c-comment__submit-btn">Comment</button>
+                    </div>
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="c-comment__login-link-wraper">
+                <a href="@Url.Action("SignIn", "Account", new { returnUrl = Request.QueryString["returnUrl"] })" class="c-link">Login to comment</a>
+            </div>
+        }
+
+    </div>
+
+
+    <div class="c-comment__content-cntr">
+        <ul id="comment-list">
+        </ul>
+    </div>
+    @Html.HiddenFor(m => m.PostType)
+</div>

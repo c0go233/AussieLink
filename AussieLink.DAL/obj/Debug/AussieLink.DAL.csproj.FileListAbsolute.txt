@@ -1,0 +1,78 @@
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.DAL.dll
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.DAL.pdb
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.csprojResolveAssemblyReference.cache
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.dll
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.pdb
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.DAL.dll.config
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.Contracts.dll
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\EntityFramework.dll
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.Contracts.pdb
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\EntityFramework.xml
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.Initial.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.csproj.GenerateResource.Cache
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulatePlaces.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateSalaryType.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateContractTypes.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateJobTypes.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddDayCategory.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateDayCategory.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddDayCategory1.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateDayCategory1.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateDayCategory3.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddCompleteToPost.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddAmountToDAyCategory.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateAmountOfDayCategory.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddWeeklyAndHourlySalaryCategory.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.ChangetypeOfAmount.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateWeeklyCategoryAndHourlyCategory.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.changeOrderOfSalaryType.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddCommentsAndPostType.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddPostTypeToComment.resources
+C:\Users\kisungtae\Desktop\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.populatepostytpe.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.DAL.dll.config
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.DAL.dll
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.DAL.pdb
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.Contracts.dll
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\EntityFramework.dll
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\AussieLink.Contracts.pdb
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\EntityFramework.xml
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.csprojResolveAssemblyReference.cache
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.dll
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.pdb
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.InitialModel.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.csproj.GenerateResource.Cache
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulatePlaceCategory.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateSalaryTypeCategory.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateContractTypeCategory.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateJobTypeCategory.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateDayCategory.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateWeeklySalaryCategory.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateHourlySalaryCategory.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulatePostTypeCategory.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.ChangeNameOfPostType.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddCancelToPost.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddGender.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateGender.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddState.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateState.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddSuburb.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.ReseedSuburb.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateSuburb.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.DeleteState.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateSydneySuburbs.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddMelbourneSuburb.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateBrisbaneSuburbs.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateAdleidSuburbs.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulatePerthSuburbs.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddShareType.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateShareType.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.PopulateOthersForSuburbs.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddAddress.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.ReseedAddress.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddSharePost.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddPicture.resources
+C:\Users\kisungTae\Desktop\Work\DotNet Lectures\AussieLink\AussiLink\AussieLink.DAL\obj\Debug\AussieLink.DAL.Migrations.AddPictureTypeToPicture.resources

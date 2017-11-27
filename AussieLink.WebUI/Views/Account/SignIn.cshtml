@@ -1,0 +1,62 @@
+﻿@model AussieLink.Contracts.ViewModels.UserSigninVM
+
+@{
+    ViewBag.Title = "SignIn";
+}
+
+<section class="signin">
+    <div class="signin__cntr">
+        @Html.Partial("/Views/Shared/SignForm/_SignFormTop.cshtml")
+        @Html.ValidationSummary(true)
+        <div class="signup__body fx">
+            <div class="signup__form-cntr fx-1">
+                @using (Html.BeginForm("SignIn", "Account", new { ReturnUrl = Request.QueryString["ReturnUrl"] }))
+                {
+                    <div class="signup__input-cntr">
+                        @Html.EditorFor(m => m.Email, new { htmlAttributes = new { placeholder = "Email", @class = "form-input signup__input" } })
+                        @Html.ValidationMessageFor(m => m.Email)
+                    </div>
+
+                    <div class="signup__input-cntr">
+                        @Html.EditorFor(m => m.Password, new { htmlAttributes = new { placeholder = "Password", @class = "form-input signup__input" } })
+                        @Html.ValidationMessageFor(m => m.Password)
+                    </div>
+
+                    <div class="signin__checkbox-cntr fx-spc-btw">
+                        <div class="c-checkbox-cntr">
+                            @Html.CheckBoxFor(m => m.RememberMe, new { @class = "c-checkbox", id = "c-checkbox" })
+                            <label for="c-checkbox" class="c-checkbox-label">Remember Me</label>
+                        </div>
+
+                        <a href="@Url.Action("ForgotPassword", "Account")" class="c-link">Forgot Password?</a>
+
+                    </div>
+
+                    <button type="submit" class="c-btn signup__btn signin__btn">Sign In</button>
+
+                    <div class="txt-align-center">You don't have account? <a href="@Url.Action("SignUp", "Account", new { ReturnUrl = Request.QueryString["ReturnUrl"] } )" class="c-link"> Sign Up Now</a></div>
+
+                    @Html.AntiForgeryToken()
+                }
+            </div>
+
+            <div class="signup__social-links fx-1">
+                <a href="@Url.Action("SignInWithFacebook", "FacebookAccount", new { ReturnUrl = Request.QueryString["ReturnUrl"] })" class="social-link social-link-facebook signup__social-link">
+                    <i class="ion-social-facebook social-link-icon"></i>
+                    <span class="">Sign In with Facebook</span>
+                </a>
+                <a href="@Url.Action("SignInWithGoogle", "GoogleAccount", new { ReturnUrl = Request.QueryString["ReturnUrl"] })" class="social-link social-link-google signup__social-link">
+                    <i class="ion-social-googleplus social-link-icon"></i>
+                    <span class="">Sign In with Google</span>
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+</section>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}

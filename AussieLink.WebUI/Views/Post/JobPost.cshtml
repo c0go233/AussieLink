@@ -1,0 +1,98 @@
+﻿@model AussieLink.Contracts.ViewModels.PostViewModels.JobPostVM
+
+
+@{
+    ViewBag.Title = "JobPost";
+}
+
+<div class="c-mc">
+    <div class="c-mc__cntr fx c-mc__cntr-mg-b">
+        <div class="c-mc__left">@Html.Partial("/Views/Shared/Post/_PostLeftMenu.cshtml")</div>
+        <div class="c-mc__center fx-1">
+            <div class="post__body">
+                <header class="c-post-header">Post Your Ad</header>
+                @using (Html.BeginForm("SaveJobPost", "Post", new { returnUrl = Request.QueryString["returnUrl"]}))
+                {
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.PlaceId, new { @class = "post__label" })
+                            @Html.DropDownListFor(m => m.PlaceId, new SelectList(Model.JobCategories.Places, "PlaceId", "Name"), "Select Place", new { @class ="select-box fx-1"})
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.PlaceId)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.JobTypeId, new { @class = "post__label" })
+                            @Html.DropDownListFor(m => m.JobTypeId, new SelectList(Model.JobCategories.JobTypes, "JobTypeId", "Name"), "Select Job Type", new { @class = "select-box fx-1" })
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.JobTypeId)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.ContractTypeId, new { @class = "post__label" })
+                            @Html.DropDownListFor(m => m.ContractTypeId, new SelectList(Model.JobCategories.ContractTypes, "ContractTypeId", "Name"), "Select Contract Type", new { @class = "select-box fx-1" })
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.ContractTypeId)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            @Html.LabelFor(m => m.JobPostSalaryVM.SalaryTypeId, new { @class = "post__label c-optional-field" })
+                            <div class="fx fx-1 post__salary-input-cntr">
+                                @Html.DropDownListFor(m => m.JobPostSalaryVM.SalaryTypeId, new SelectList(Model.JobCategories.SalaryTypes, "SalaryTypeId", "Name"), "Salary Type", new { @class = "select-box post__salary-label c-mg-r-5" })
+                                <div class="fx post__salary-inner-input-cntr">
+                                    @Html.EditorFor(m => m.JobPostSalaryVM.MinSalary, new { htmlAttributes = new { @class = "form-input fx-1 c-mg-r-5", placeholder = "Min" } })
+                                    @Html.EditorFor(m => m.JobPostSalaryVM.MaxSalary, new { htmlAttributes = new { @class = "form-input fx-1", placeholder = "Max" } })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post__error-msg-cntr fx-colum">
+                            @Html.ValidationMessageFor(m => m.JobPostSalaryVM.SalaryTypeId)
+                            @Html.ValidationMessageFor(m => m.JobPostSalaryVM.MaxSalary)
+                            @Html.ValidationMessageFor(m => m.JobPostSalaryVM.MinSalary)
+                        </div>
+                    </div>
+
+                    <div class="post__input-section">
+                        <div class="post__input-cntr fx">
+                            <label class="post__label c-optional-field" for="MinDay">Day</label>
+                            <div class="post__day-input-cntr fx fx-1">
+                                @Html.DropDownListFor(m => m.JobPostDayVM.MinDay, new SelectList(Model.JobCategories.DayCategories, "DayCategoryId", "Name"), "Minimum Day", new { @class = "select-box fx-1 c-mg-r-5" })
+                                @Html.DropDownListFor(m => m.JobPostDayVM.MaxDay, new SelectList(Model.JobCategories.DayCategories, "DayCategoryId", "Name"), "Maximum Day", new { @class = "select-box fx-1" })
+                            </div>
+                        </div>
+                        <div class="post__error-msg-cntr">
+                            @Html.ValidationMessageFor(m => m.JobPostDayVM.MinDay)
+                        </div>
+                    </div>
+
+                    @Html.Partial("/Views/Shared/Post/_PostCommonInputs.cshtml", Model)
+
+                    <div class="post__submit-btn-cntr">
+                        <button class="c-btn post__submit-btn">POST</button>
+                    </div>
+
+                    @Html.HiddenFor(m => m.PostId)
+                    @Html.AntiForgeryToken()
+
+                }
+            </div>
+        </div>
+        <div class="c-mc__right"></div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/Content/Resources/JavaScript/postScript.js")
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
