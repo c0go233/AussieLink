@@ -1,5 +1,5 @@
 # AussieLink
-AussieLink is a .NET based website that people can post and search for various advertisements
+AussieLink is a .NET based website that people can use to post and search for various advertisements
 
 # Technical Specifications
 - MVC design pattern
